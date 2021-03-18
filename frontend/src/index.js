@@ -29,7 +29,7 @@ ReactDOM.render(
           <Switch>
             <Route exact path="/" component={CompanyPage}/>
             <Route exact path="/company/detail" component={CompanyDetailPage}/>
-            <Route exact path="/login" component={LoginPage}/>} />
+            <Route exact path="/login" component={LoginPage}/>
             <Route exact path="/login/email_verification" component={EmailVerificationPage}/>
             <Route exact path="/register" component={RegisterPage}/>
             <Route exact path="/reset_password" component={ResetPasswordEmail}/>

@@ -47,18 +47,22 @@ INSTALLED_APPS = [
     'django_extensions',
     'django.contrib.sitemaps',
     # Installed Apps
+    'django.contrib.sites',
     'rest_framework',
+    'rest_framework.authtoken',
     'anymail',
     'api',
+    
+    # 'rest_auth',
+    'corsheaders',
 
-#for social login
-     'django.contrib.sites',
-     'allauth',
-     'allauth.account',
-     'rest_auth.registration',
-     'allauth.socialaccount',
-     'allauth.socialaccount.providers.facebook',
-     'allauth.socialaccount.providers.google',
+    # Auth & social auth
+    'dj_rest_auth',
+    'dj_rest_auth.registration',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.google',
 ]
 
 MIDDLEWARE = [
@@ -69,6 +73,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'anuk.urls'
@@ -138,8 +143,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-SITE_ID = 1
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
@@ -155,7 +158,9 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticated',
     ),
     'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+        'dj_rest_auth.utils.JWTCookieAuthentication',
     ),
 }
 
@@ -163,9 +168,10 @@ AUTH_USER_MODEL = 'api.User'
 
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(hours=1),
-    'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
-    'ROTATE_REFRESH_TOKENS': False,
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=7),
+    'ROTATE_REFRESH_TOKENS': True,
     'BLACKLIST_AFTER_ROTATION': True,
+    'UPDATE_LAST_LOGIN': True,
 
     'ALGORITHM': 'HS256',
     'SIGNING_KEY': SECRET_KEY,
@@ -183,10 +189,36 @@ SIMPLE_JWT = {
     'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(days=1),
 }
 
-EMAIL_BACKEND = "anymail.backends.sendgrid.EmailBackend"
+EMAIL_BACKEND = 'anymail.backends.sendgrid.EmailBackend'
 
 DEFAULT_FROM_EMAIL = os.getenv('DEFAULT_FROM_EMAIL')
 
 ANYMAIL = {
-    "SENDGRID_API_KEY": os.getenv('SENDGRID_API_KEY'),
+    'SENDGRID_API_KEY': os.getenv('SENDGRID_API_KEY'),
 }
+
+
+JWT_AUTH_COOKIE = 'jwt-auth'
+CORS_ORIGIN_ALLOW_ALL = True
+
+SOCIALACCOUNT_PROVIDERS = {
+    'google': {
+        'SCOPE': [
+            'profile',
+            'email',
+        ],
+        'AUTH_PARAMS': {
+            'access_type': 'online',
+        }
+    }
+}
+
+SOCIALACCOUNT_EMAIL_VERIFICATION = 'none'
+SOCIALACCOUNT_EMAIL_REQUIRED = False
+
+REST_USE_JWT = True
+
+SITE_ID = 3
+
+
+

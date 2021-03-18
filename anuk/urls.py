@@ -17,10 +17,13 @@ from django.contrib import admin
 from django.urls import path, include, re_path
 from django.views import generic
 from api.views import GoogleLogin
+import dj_rest_auth
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('api.urls')),
     path('rest-auth/google/', GoogleLogin.as_view(), name='google_login'),
+    path('auth/', include('dj_rest_auth.urls')),
     re_path(r'.*', generic.TemplateView.as_view(template_name='index.html')),
+    path(r'^accounts/', include('allauth.urls'), name='socialaccount_signup'),
 ]
