@@ -1,0 +1,127 @@
+.footer {
+  background-color: $default-page-color;
+  //line-height: 300px;
+
+  img {
+    width: 253px;
+    margin: 50px 0 20px 0;
+  }
+
+  .social-title  {
+    font-size: $font-size-large;
+    font-family: Serif;
+    color: $white-color;
+    margin-left: 20px;
+  }
+
+  .social-link {
+    font-size: $font-size-large-navbar;
+    position: relative;
+    line-height: 16px;
+
+    >a {
+      color: $white-color;
+      margin-left: 10px;
+      &:hover,
+      &:focus {
+        color: $info-color;
+      }
+    }
+  }
+
+  p {
+    font-family: Serif;
+    margin-top: 20px;
+    color: $white-color;
+    text-align: center;
+  }
+
+  .margin-bottom {
+    margin-bottom: 30px;
+  }
+
+  nav > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+
+    a:not(.btn) {
+      color: $dark-gray;
+      display: block;
+      margin-bottom: 3px;
+      &:hover,
+      &:focus {
+        color: $default-states-color;
+      }
+    }
+  }
+  .social-area {
+    padding: 15px 0;
+    h5 {
+      padding-bottom: 15px;
+    }
+  }
+  .social-area > a:not(.btn) {
+    color: $dark-gray;
+    display: inline-block;
+    vertical-align: top;
+    padding: $padding-social-a;
+    font-size: $font-size-large-navbar;
+    font-weight: normal;
+    line-height: $line-height;
+    text-align: center;
+    &:hover,
+    &:focus {
+      color: $default-states-color;
+    }
+  }
+  .copyright {
+    color: $default-states-color;
+    padding: 10px 15px;
+    margin: 10px 3px;
+    line-height: 31px;
+    font-size: $font-size-base;
+  }
+  hr {
+    margin-top: 9px;
+    border: 1px solid $medium-gray;
+    margin-right: 0px;
+  }
+
+  .title {
+    color: $white-color;
+    font-family: Serif;
+    font-size: 22px;
+    font-weight: normal;
+  }
+
+  .support-title {
+    color: #D8F4AA;
+  }
+
+  .sub-title {
+    >a {
+      color: $white-color;
+      font-family: Serif;
+      font-size: 16px;
+      margin-bottom: 5px;
+      &:hover {
+        color: $info-color;
+      }
+    }
+  }
+
+  .contact-info {
+    >a {
+      color: $white-color;
+      font-family: Serif;
+    }
+  }
+
+  .cat-hr {
+    width: 30%;
+    margin-left: 0px;
+    color: #D8F4AA;
+  }
+}
