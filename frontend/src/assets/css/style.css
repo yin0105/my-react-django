@@ -1,0 +1,154 @@
+.navbar-header {
+    width: 100%;
+}
+
+#header-right {
+    float:right;
+}
+
+
+
+span.navbar-brand i {
+    color: white;
+}
+
+a.link_as_btn span.navbar-name {
+    color: white;
+}
+a.link_as_btn {
+    color: white !important;
+    padding: 10px 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 5px;
+    min-width: 140px;
+    background: linear-gradient(180deg, #9ECD51 0%, #638F1B 100%) !important;
+    border: 1px solid #87cb16;
+}
+/* 
+a.link_as_btn:hover {
+    background-color: #555;
+}
+
+a.link_as_btn:active {
+    background-color: black;
+}
+
+a.link_as_btn:visited {
+    background-color: #ccc;
+} */
+
+
+@media screen and (max-width: 960px) {
+    .m-hidden {
+        display: none;
+    }
+
+    .card .title .page-title {
+        font-size: 25px;
+        font-weight: normal;
+        margin-top: 8px;
+        font-family: Bree Serif;
+        line-height: 112.5%;
+    }
+
+    .card .header {
+        padding: 15px 25px 0px;
+    }
+}
+
+@media screen and (max-width: 960px) and (min-width: 768) {
+
+}
+
+@media only screen and (max-width: 768px) {
+
+    [class*="col-"] {
+        display: block;
+        margin: 10px 0px;
+    }
+
+    [class*="col-"] button {
+        width:100%;
+    }
+
+
+
+
+    .navbar .navbar-brand {
+        padding: 11px 12px 12px 0px;
+    }
+
+    .container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header {
+        margin-left: 0px;
+    }
+
+    #navlist li {
+        display: inline;
+        list-style-type: none;
+        padding-right: 20px;
+    }
+
+    #navlist {
+        float: right;
+        padding: 18px 6px;
+    }
+
+    #navlist li {
+        padding-right: 12px;
+    }
+
+    #header-right span {
+        padding: 16px 0px 12px 12px;
+    }
+
+    .navbar-absolute {
+        height: 45px;
+        margin-bottom: 0px;
+    }
+
+    .second-navbar .container {
+        top: 45px;
+        height: 70px;
+    }
+
+    .second-navbar .logo {
+        width: 253px;
+        padding: 15px 0 15px 0;
+    }
+
+    .navbar-margin {
+        margin-top: 15px;
+    }
+
+    .second-navbar {
+        height: 130px;
+    }
+
+    .second-navbar .navbar-margin {
+        margin-top: 0px;
+    }
+
+    /* .ceVmBL {
+        z-index: 100;
+        padding-top: 100px;
+    } */
+
+}
+
+@media only screen and (min-width: 768px) {
+/* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+
+}
