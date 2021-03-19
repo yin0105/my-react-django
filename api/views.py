@@ -261,5 +261,5 @@ class GoogleLogin(SocialLoginView):
     adapter_class = GoogleOAuth2Adapter
     # UPDATED PART
     authentication_classes = [] # disable authentication
-    callback_url = "http://localhost:8000/rest-auth/google/login"
+    callback_url = "http://localhost:8000" #/rest-auth/google/login"
     client_class = OAuth2Client

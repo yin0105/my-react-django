@@ -8,6 +8,8 @@ import CompanyCard from "../../components/Card/CompanyCard";
 import companyImg from "../../assets/img/company/48forty-solutions_comp_pro_mar_2018.jpg"
 import companyImg2 from "../../assets/img/company/4earth-farms_comp_pro_apr_2016.jpg"
 import Footer from "../Layout/Footer";
+import "../../assets/css/style.css";
+
 require("bootstrap/less/bootstrap.less");
 
 class CompanyPage extends Component {

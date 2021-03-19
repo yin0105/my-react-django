@@ -23,7 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('api.urls')),
     path('rest-auth/google/', GoogleLogin.as_view(), name='google_login'),
-    path('auth/', include('dj_rest_auth.urls')),
+    path('dj_rest_auth/', include('dj_rest_auth.urls')),
     re_path(r'.*', generic.TemplateView.as_view(template_name='index.html')),
     path(r'^accounts/', include('allauth.urls'), name='socialaccount_signup'),
 ]

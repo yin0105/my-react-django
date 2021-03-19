@@ -9,13 +9,14 @@ export class GoogleSocialAuth extends Component {
       console.log("response in google", response);
       console.log("tokenObj = ", response.tokenObj);
       console.log("token = ", response.tokenObj.access_token);
-      googleLogin(response.tokenObj.access_token);
+      
+      googleLogin(response.tokenObj.access_token, response.tokenObj.id_token);
     }
     return (
 
         <GoogleLogin
           clientId="90330061170-sffkbkaajtndi7ajpmica5vao9pim7n3.apps.googleusercontent.com"
-          buttonText="Login WITH GOOGLE"
+          buttonText="Login with Google"
           onSuccess={googleResponse}
           onFailure={googleResponse}
         />
