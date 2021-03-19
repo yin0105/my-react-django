@@ -23,7 +23,7 @@ const Nav_2 = styled.nav`
   width: 100%;
   height: 55px;
   border-bottom: 2px solid #f1f1f1;
-  padding: 0 20px;
+  padding: 0 0px;
   display: flex;
   justify-content: space-between;
   .logo {
@@ -128,55 +128,11 @@ class HomeNavbar extends Component {
 
                 <Nav_2>
                   <div className="logo">
-                    Nav Bar
                   </div>
                   <Burger />
                 </Nav_2>
-                
-                {/* <NavDropdown
-                  eventKey={4}
-                  title={
-                    <div>
-                      <i className="fa fa-list" />
-                      <p className="hidden-md hidden-lg">
-                        More
-                        <b className="caret" />
-                      </p>
-                    </div>
-                  }
-                  noCaret
-                  id="basic-nav-dropdown-3"
-                  bsClass="dropdown-with-icons dropdown"
-                >
-                  <MenuItem eventKey={4.1}>
-                    <i className="pe-7s-mail" /> Messages
-                  </MenuItem>
-                  <MenuItem eventKey={4.2}>
-                    <i className="pe-7s-help1" /> Help Center
-                  </MenuItem>
-                  <MenuItem eventKey={4.3}>
-                    <i className="pe-7s-tools" /> Settings
-                  </MenuItem>
-                  <MenuItem divider />
-                  <MenuItem eventKey={4.4}>
-                    <i className="pe-7s-lock" /> Lock Screen
-                  </MenuItem>
-                  <MenuItem eventKey={4.5}>
-                    <div className="text-danger">
-                      <i className="pe-7s-close-circle" /> Log out
-                    </div>
-                  </MenuItem>
-                </NavDropdown> */}
-
-                {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                  <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-                </NavDropdown> */}
               
-                <ul className="nav navbar-nav navbar-right">
+                {/* <ul className="nav navbar-nav navbar-right">
                   <li>
                     <a href={"/login"}>
                       <span className="navbar-name">News</span>
@@ -212,7 +168,7 @@ class HomeNavbar extends Component {
                       <Button bsStyle="success" fill >Join now</Button>
                     </a>
                   </li>
-                </ul>
+                </ul> */}
               {/*</div>*/}
             </div>
           {/*</Col>*/}
