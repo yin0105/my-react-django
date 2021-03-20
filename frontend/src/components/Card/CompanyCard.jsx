@@ -15,6 +15,8 @@
 
 */
 import React, { Component } from "react";
+import { Icon, InlineIcon } from '@iconify/react';
+import iosArrowDropright from '@iconify-icons/ion/ios-arrow-dropright';
 
 export class CompanyCard extends Component {
   render() {
@@ -33,7 +35,10 @@ export class CompanyCard extends Component {
           {/*<hr />*/}
           <div className="stats">
             {this.props.companyName}
-            <span className="pull-right">{this.props.statsIcon}</span>
+            {/* <iconify-icon data-icon="line-md:image-twotone"></iconify-icon> */}
+            {/* <span class="iconify" data-icon="ion-ios-arrow-dropright-circle" data-inline="false"></span> */}
+            
+            <span className="pull-right"><Icon icon={iosArrowDropright} width="20px" height="20px" /></span> 
           </div>
         </div>
       </div>

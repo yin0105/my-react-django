@@ -44,42 +44,43 @@ class CompanyPage extends Component {
           <div className="content">
             <Grid>
               <Row>
-                <Col md={12} sm={12}>
-                  <Card
-                    textCenter
-                    title={
-                      <div className="page-title">
-                        <span>Fresh Produce Company Directory</span>
-                      </div>
-                    }
-                    content={
-                      <Row>
-                        <Col md={10} mdOffset={1} className="margin-top margin-bottom">
-                          <FormGroup>
-                            <Col md={8}>
-                              <FormControl placeholder="Name" name="name" type="name" value={name}
-                                           onChange={this.handleChangeInput}/>
-                            </Col>
-                            <Col md={2}>
-                              <Button className="apply-button" fill>
-                                Apply
-                              </Button>
-                            </Col>
-                            <Col md={2}>
-                              <Button className="reset-button" onClick={this.handleReset}>
-                                Reset
-                              </Button>
-                            </Col>
-                          </FormGroup>
+                <Card
+                  textCenter
+                  title={
+                    <div className="page-title">
+                      <span>Fresh Produce Company Directory</span>
+                    </div>
+                  }
+                  content={
+                    <Row>
+                      <Col md={10} mdOffset={1} className="margin-top margin-bottom">
+                        <FormGroup>
+                          <Col md={8}>
+                            <FormControl placeholder="Name" name="name" type="name" value={name}
+                                          onChange={this.handleChangeInput}/>
                           </Col>
-                      </Row>
-                    }
-                  />
-                </Col>
+                          <Col md={2}>
+                            <Button className="apply-button" fill>
+                              Apply
+                            </Button>
+                          </Col>
+                          <Col md={2}>
+                            <Button className="reset-button" onClick={this.handleReset}>
+                              Reset
+                            </Button>
+                          </Col>
+                        </FormGroup>
+                        </Col>
+                    </Row>
+                  }
+                />
+              </Row>
+                
+              <Row>
                 <Col md={3} sm={3}>
                   <a href={'/company/detail'}>
                     <CompanyCard
-                      companyImg={<img src={companyImg}/>}
+                      companyImg={<img className="col-12" src={companyImg}/>}
                       statsIcon={<i className="fa fa-chevron-right" />}
                       companyName="48forty Solutions"
                     />
@@ -88,7 +89,7 @@ class CompanyPage extends Component {
                 <Col md={3} sm={3}>
                   <a href={'/company/detail'}>
                     <CompanyCard
-                      companyImg={<img src={companyImg2}/>}
+                      companyImg={<img className="col-12" src={companyImg2}/>}
                       statsIcon={<i className="fa fa-chevron-right" />}
                       companyName="4Earth Farms"
                     />
@@ -97,7 +98,7 @@ class CompanyPage extends Component {
                 <Col md={3} sm={3}>
                   <a href={'/company/detail'}>
                     <CompanyCard
-                      companyImg={<img src={companyImg}/>}
+                      companyImg={<img className="col-12" src={companyImg}/>}
                       statsIcon={<i className="fa fa-chevron-right" />}
                       companyName="48forty Solutions"
                     />
@@ -106,33 +107,34 @@ class CompanyPage extends Component {
                 <Col md={3} sm={3}>
                   <a href={'/company/detail'}>
                     <CompanyCard
-                      companyImg={<img src={companyImg}/>}
+                      companyImg={<img className="col-12" src={companyImg}/>}
                       statsIcon={<i className="fa fa-chevron-right" />}
                       companyName="48forty Solutions"
                     />
                   </a>
                 </Col>
                 <Col md={3} sm={3}>
-                  <a href={'/company/detail'}>
-                    <CompanyCard
-                      companyImg={<img src={companyImg}/>}
-                      statsIcon={<i className="fa fa-chevron-right" />}
-                      companyName="48forty Solutions"
-                    />
-                  </a>
-                </Col>
-                <Col md={12} className="text-center">
-                  <Pagination
-                    activePage={this.state.activePage}
-                    itemsCountPerPage={10}
-                    prevPageText={<span><i className="fa fa-angle-left"/> Previous</span>}
-                    nextPageText={<span>Next <i className="fa fa-angle-right"/></span>}
-                    totalItemsCount={50}
-                    pageRangeDisplayed={5}
-                    onChange={this.handlePageChange.bind(this)}
+                <a href={'/company/detail'}>
+                  <CompanyCard
+                    companyImg={<img className="col-12" src={companyImg}/>}
+                    statsIcon={<i className="fa fa-chevron-right" />}
+                    companyName="48forty Solutions"
                   />
-                </Col>
+                </a>
+              </Col>
               </Row>
+              <Row className="text-center">
+                <Pagination
+                  activePage={this.state.activePage}
+                  itemsCountPerPage={10}
+                  prevPageText={<span><i className="fa fa-angle-left"/> Previous</span>}
+                  nextPageText={<span>Next <i className="fa fa-angle-right"/></span>}
+                  totalItemsCount={50}
+                  pageRangeDisplayed={3}
+                  onChange={this.handlePageChange.bind(this)}
+                />
+              </Row>
+            
             </Grid>
           </div>
         </div>

@@ -7,10 +7,11 @@ const Ul = styled.ul`
   list-style: none;
   display: flex;
   flex-flow: row nowrap;
-  padding: 0px 30px;
+  padding: 0px 0px;
   position: relative;
-  top: -60px;
-  right: 15px;
+  top: -50px;
+  right: 0px;
+  align-items: center;
 
   li {
     padding: 10px;
@@ -20,20 +21,21 @@ const Ul = styled.ul`
   @media (max-width: 1200px) {
     flex-flow: column nowrap;
     background-color: #0D2538;
-    position: fixed;
+    position: relative;
     transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
-    padding-top: 10px;
+    padding: 10px 30px;
     z-index: 100;
     width: 256px;
     height: 355px;
-    right: 0px;
-    top: 130px;
+    right: -15px;
+    top: -5px;
     background: linear-gradient(180deg, #9ECD51 0%, #638F1B 100%);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
     transition: transform 0.3s ease-in-out;
     li {
       color: #fff;
+      width: 100%;
     }
 
     li {

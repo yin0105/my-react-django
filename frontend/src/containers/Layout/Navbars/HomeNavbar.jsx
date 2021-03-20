@@ -22,13 +22,13 @@ import {
 const Nav_2 = styled.nav`
   width: 100%;
   height: 55px;
-  border-bottom: 2px solid #f1f1f1;
+  ${'' /* border-bottom: 2px solid #f1f1f1; */}
   padding: 0 0px;
   display: flex;
-  justify-content: space-between;
-  .logo {
+  justify-content: flex-end;
+  ${'' /* .logo {
     padding: 15px 0;
-  }
+  } */}
 `
 
 class HomeNavbar extends Component {
@@ -123,13 +123,16 @@ class HomeNavbar extends Component {
           {/*<Row>*/}
             {/*<div className="second-navbar">*/}
               <div className="navbar-margin">
-                <img src={logoImage} className="logo"/>
+                <img src={logoImage} id="header-logo"/>
+                
                 {/*<ul className="navbar-right">*/}
 
                 <Nav_2>
-                  <div className="logo">
-                  </div>
+                  {/* <div className="logo">
+                  </div> */}
+                  
                   <Burger />
+                  
                 </Nav_2>
               
                 {/* <ul className="nav navbar-nav navbar-right">

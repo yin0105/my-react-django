@@ -6,6 +6,26 @@
     float:right;
 }
 
+#second-header-right {
+    display: flex;    
+    align-items: center;
+}
+
+#header-logo {
+    margin: 5px 0px 0px 15px;
+    width: 240px;
+}
+
+div.stats {
+    align-items: center !important;
+    display: flex !important;
+    justify-content: space-between !important;
+}
+
+.pull-right {
+    display: flex;
+}
+
 
 
 span.navbar-brand i {
@@ -37,18 +57,28 @@ a.link_as_btn:active {
 a.link_as_btn:visited {
     background-color: #ccc;
 } */
+@media screen and (max-width: 1200px){
+    .card .apply-button {
+        min-width: 120px;
+    }
+}
+@media screen and (max-width: 1000px) {
+    [class*="col-"] {
+        display: block;
+        margin: 10px 0px;
+    }
 
-
-@media screen and (max-width: 960px) {
+    [class*="col-"] button {
+        width:100%;
+    }
     .m-hidden {
         display: none;
     }
 
     .card .title .page-title {
-        font-size: 25px;
-        font-weight: normal;
-        margin-top: 8px;
-        font-family: Bree Serif;
+        /* font-weight: normal; */
+        /* margin-top: 8px; */
+        /* font-family: Bree Serif; */
         line-height: 112.5%;
     }
 
@@ -62,18 +92,6 @@ a.link_as_btn:visited {
 }
 
 @media only screen and (max-width: 768px) {
-
-    [class*="col-"] {
-        display: block;
-        margin: 10px 0px;
-    }
-
-    [class*="col-"] button {
-        width:100%;
-    }
-
-
-
 
     .navbar .navbar-brand {
         padding: 11px 12px 12px 0px;
@@ -107,15 +125,10 @@ a.link_as_btn:visited {
         margin-bottom: 0px;
     }
 
-    .second-navbar .container {
+    /* .second-navbar .container {
         top: 45px;
         height: 70px;
-    }
-
-    .second-navbar .logo {
-        width: 253px;
-        padding: 15px 0 15px 0;
-    }
+    }     */
 
     .navbar-margin {
         margin-top: 15px;
@@ -125,9 +138,9 @@ a.link_as_btn:visited {
         height: 130px;
     }
 
-    .second-navbar .navbar-margin {
-        margin-top: 0px;
-    }
+    /* .second-navbar .navbar-margin {
+        margin-top: 0px !important;
+    } */
 
     /* .ceVmBL {
         z-index: 100;
